@@ -1,0 +1,20 @@
+{
+  "name": "jbox-lua-types",
+  "version": "0.0.2",
+  "description": "TypeScript definitions for jukebox scripting specification for custom displays (Rack Extension SDK)",
+  "keywords": [
+    "lua",
+    "typescript",
+    "tstl",
+    "jbox",
+    "custom display",
+    "jukebox"
+  ],
+  "repository": "https://github.com/artotaku/jbox-lua-types",
+  "scripts": {},
+  "author": "artotaku",
+  "license": "MIT",
+  "files": [
+    "**/*.d.ts"
+  ]
+}
