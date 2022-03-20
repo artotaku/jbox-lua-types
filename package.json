@@ -1,6 +1,6 @@
 {
   "name": "jbox-lua-types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TypeScript definitions for jukebox scripting specification for custom displays (Rack Extension SDK)",
   "keywords": [
     "lua",
