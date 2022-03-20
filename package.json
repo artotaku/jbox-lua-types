@@ -10,7 +10,10 @@
     "custom display",
     "jukebox"
   ],
-  "repository": "https://github.com/artotaku/jbox-lua-types",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artotaku/jbox-lua-types.git"
+  },
   "scripts": {},
   "author": "artotaku",
   "license": "MIT",
