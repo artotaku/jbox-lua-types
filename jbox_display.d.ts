@@ -54,32 +54,32 @@ declare namespace jbox_display {
 
 	interface GestureHandlerResult {
 		gesture_ui_name?: jbox.UiText;
-		property_changes?: PropertyValues;
+		property_changes?: PropertyValue[];
 	}
 
 	type on_tap = (
-		property_values: PropertyValues,
+		property_values: PropertyValue[],
 		display_info: DisplayInfo,
 		gesture_info: GestureInfo,
 		custom_data: CustomData
 	) => GestureHandlerResult;
 
 	type on_update = (
-		property_values: PropertyValues,
+		property_values: PropertyValue[],
 		display_info: DisplayInfo,
 		gesture_info: GestureInfo,
 		custom_data: CustomData
 	) => GestureHandlerResult;
 
 	type on_release = (
-		property_values: PropertyValues,
+		property_values: PropertyValue[],
 		display_info: DisplayInfo,
 		gesture_info: GestureInfo,
 		custom_data: CustomData
 	) => GestureHandlerResult;
 
 	type on_cancel = (
-		property_values: PropertyValues,
+		property_values: PropertyValue[],
 		display_info: DisplayInfo,
 		gesture_info: GestureInfo,
 		custom_data: CustomData
@@ -140,24 +140,22 @@ declare namespace jbox_display {
 
 	function invalidate(rect: Rectangle): void;
 
-	interface PropertyValues {
-		[property_name: string]: any;
-	}
+	type PropertyValue = any;
 
 	type invalidate = (
-		property_values: PropertyValues,
-		last_property_values: PropertyValues,
+		property_values: PropertyValue[],
+		last_property_values: PropertyValue[],
 		display_info: DisplayInfo
 	) => void;
 
 	type draw = (
-		property_values: PropertyValues,
-		display_info: PropertyValues,
+		property_values: PropertyValue[],
+		display_info: DisplayInfo,
 		dirty_rect: Rectangle
 	) => void;
 
 	type recognize_gesture = (
-		property_values: PropertyValues,
+		property_values: PropertyValue[],
 		display_info: DisplayInfo,
 		gesture_start_point: Point
 	) => GestureDefinition;
